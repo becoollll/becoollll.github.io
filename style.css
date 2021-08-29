@@ -35,7 +35,10 @@ body{
 nav > ul {
     background-color: rgba(255, 255, 255, 0.568);
     list-style: none;   /* 移除項目符號 */
-    margin: 0;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 0%;
+    margin-bottom: 0%;
     padding: 0;
 }
 
@@ -51,18 +54,5 @@ nav a {
 nav a:hover {
     background-color: #687e92;
     color: white;
-}
-
-.stoc{
-    width: 200px;
-    height: 200px;
-    background-color: #ccc;
-    margin: 80px auto 0;
-    transition: 0.5s;
-}
-.stoc:hover{
-    transform: rotate(-45deg);
-    background-color: #fa0;
-    border-radius:50%;
 }
 

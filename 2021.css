@@ -8,11 +8,11 @@ p{
     font: weight 1000px; /*粗細*/
 }
 #container {/*留白*/
-    padding-top:15px;
-    padding-left:30px;
-    padding-right:30px;
-    padding-bottom:40px;
-    border: 1px solid 000000;
+    padding-top:1.5%;
+    padding-left:3%;
+    padding-right:3%;
+    padding-bottom:4%;
+    border: 6.25% solid 000000;
   }
 .center{
     text-align: center;
@@ -47,7 +47,10 @@ p{
 nav > ul {
     background-color: rgba(255, 255, 255, 0);
     list-style: none;   /* 移除項目符號 */
-    margin: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 0%;
+    margin-bottom: 0%;
     padding: 0;
 }
 
