@@ -197,7 +197,7 @@ class Solution {
         else if(l2 == NULL){
             return l1;
         }
-        ListNode *head = NULL; //for return
+        ListNode *head = NULL;<a class="annotation">   //for return</a> 
         if(l1->val &lt;= l2->val){
             head = l1;
             l1 = l1->next;
@@ -246,12 +246,12 @@ class Solution {
     int i=0;
     for (int j=0;j&lt;numsSize;j++)
     {
-        if (nums[j]!=nums[i]){<a class="annotation"> //找到沒有重複的值</a>
+        if (nums[j]!=nums[i]){<a class="annotation">   //找到沒有重複的值</a>
             i++;
-            nums[i] = nums[j];<a class="annotation"> //把位於nums[j](為無重複的值)移動到i++的位置</a>
+            nums[i] = nums[j];<a class="annotation">   //把位於nums[j](為無重複的值)移動到i++的位置</a>
         }
     }
-    return i + 1;<a class="annotation"> //+1是因為陣列從0開始</a>
+    return i + 1;<a class="annotation">   //+1是因為陣列從0開始</a>
 
     }
 };</code></pre>
@@ -467,6 +467,90 @@ class Solution {
         <div style="font-family: 'Poppins', sans-serif;">
             <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
                 <br>
+                <p>118. Pascal's Triangle (Easy)</p>
+            </div>
+            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
+                <p>Runtime: 0 ms<br>Memory Usage: 6.6 MB</p>
+            </div>
+        </div>
+        <pre>
+            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
+class Solution {
+    public:
+    vector&lt;vector&lt;int>> generate(int numRows) {
+
+        vector&lt;vector&lt;int>> ans;
+
+        if(numRows == 1){
+            return {{1}};
+        }
+        if(numRows == 2){
+            return {{1}, {1, 1}};
+        }
+        for(int i = 0; i &lt; numRows; i++){
+            vector&lt;int> temp;
+            for(int j = 0; j &lt;= i; j++){
+                if(i != 0 && j == 0){<a class="annotation">   //[1][0],[2][0]...</a>
+                    temp.push_back(1);
+                }
+                if(i != 0 && i != 1 && i != j && j != 0){   
+                    temp.push_back(ans[i-1][j-1] + ans[i-1][j]);
+                }
+                if(i == j){
+                    temp.push_back(1);
+                    ans.push_back(temp);
+                }
+            }
+        }
+        return ans;
+    }
+};</code></pre>
+        <div style="font-family: 'Poppins', sans-serif;">
+            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
+                <br>
+                <p>119. Pascal's Triangle II (Easy)</p>
+            </div>
+            <div style="font-weight: 500; color: srgb(194, 52, 106);font-size: 18px;">
+                <p>Runtime: 0 ms<br>Memory Usage: 6.7 MB</p>
+            </div>
+        </div>
+        <pre>
+            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
+class Solution {
+    public:
+    vector&lt;int> getRow(int rowIndex) {
+        vector&lt;vector<int>> ans;
+        if(rowIndex == 0){
+            return {1};
+        }
+        if(rowIndex == 1){
+            return {1, 1};
+        }
+        for(int i = 0; i &lt; rowIndex+1; i++){
+            vector&lt;int> temp;
+            for(int j = 0; j &lt;= i; j++){
+                if(i != 0 && j == 0){<a class="annotation">   //[1][0],[2][0]...</a>   
+                   temp.push_back(1);
+                }
+                if(i != 0 && i != 1 && i != j && j != 0){
+                    temp.push_back(ans[i-1][j-1] + ans[i-1][j]);
+                }
+                if(i == j){
+                    temp.push_back(1);
+                    ans.push_back(temp);
+                }
+            }
+        }
+        vector&lt;int> ret;
+        for(int i = 0; i &lt;= rowIndex; i++){
+            ret.push_back(ans[rowIndex][i]);
+        }
+        return ret;
+    }
+};</code></pre>
+        <div style="font-family: 'Poppins', sans-serif;">
+            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
+                <br>
                 <p>136. Single Number (Easy)</p>
             </div>
             <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
@@ -515,7 +599,7 @@ class Solution {
         if(n == 0){
             return 0;
         }
-        while(n > 0){<a class="annotation"> //階乘的規律:https://wywu.pixnet.net/blog/post/22014250</a>
+        while(n > 0){<a class="annotation">   //階乘的規律:https://wywu.pixnet.net/blog/post/22014250</a>
             n /= 5;
             ans += n;
         }

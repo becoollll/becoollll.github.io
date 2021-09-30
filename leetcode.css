@@ -36,8 +36,8 @@ body{
 nav > ul {
     background-color: rgba(255, 255, 255, 0);
     list-style: none;   /* 移除項目符號 */
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 0%;
     margin-bottom: 0%;
     padding: 0;
