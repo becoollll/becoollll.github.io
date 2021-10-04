@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(224, 224, 206);
+    background-color: rgb(224, 223, 206);
 }
 
 .center{
@@ -19,7 +19,7 @@ body{
 .col-example::after{
     content: "";
     position:absoulte;
-    background: rgb(182, 150, 150);
+    /*background: rgb(182, 150, 150);*/
     background-size: cover;
     background-position: center;
     width: 100%;
