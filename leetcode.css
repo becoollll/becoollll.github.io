@@ -47,7 +47,7 @@ nav a {
     color: inherit; /*超連結顏色*/
     text-decoration: none; /*超連結底線*/
     display: block; /*整條都可以超連結*/
-    font-size: 1.3rem; /*字大小*/
+    font-size: 4.5vmin; /*字大小*/
     padding: 20px;/*行距*/
     
 }
@@ -81,3 +81,16 @@ p{
 .annotation{
     color: rgb(141, 140, 140);
 }
+/*
+#myBtn {
+    display: none; /*初始化不顯示*/
+    /*position: fixed; /*fixed = 畫面的絕對位置，所以會跟著跑*/
+    /*bottom: 5vmin; /*離下面30 pixel*/
+    /*right: 5vmin; /*離右邊30 pixel*/
+    /*opacity:0.5; /*透明度*/
+    /*cursor: pointer; /*游標指過去會變手指*/
+
+  /*}
+#myBtn:hover {
+    background-color: #555;
+}*/
