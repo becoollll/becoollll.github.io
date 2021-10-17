@@ -47,7 +47,7 @@ nav a {
     color: inherit; /*超連結顏色*/
     text-decoration: none; /*超連結底線*/
     display: block; /*整條都可以超連結*/
-    font-size: 3vmin; /*字大小*/
+    font-size: 5vmin; /*字大小*/
     padding: 20px;/*行距*/
     
 }
