@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+body{
+    background-color: rgb(240, 236, 227);
+}
+
+.center{
+    text-align: center;
+}
+
+#container {/*留白*/
+    padding-top:1.5%;
+    padding-left:3%;
+    padding-right:3%;
+    padding-bottom:4%;
+    border: 6.25% solid 000000;
+  }
+/*#706666*/
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 312.5%;
+    font-weight: 500;
+    color: #706666;
+    margin-bottom: 0;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: rgb(89, 110, 121);
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+hr{
+    background-color:rgb(223, 211, 195); 
+    height:3px; 
+    border:none;
+}
+
+input[type="text"]{
+    padding:5px 15px; 
+    border:2px rgb(89, 110, 121) solid;
+    background-color: rgb(255, 251, 241);
+    /*cursor:pointer;*/
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="button"]{
+    padding:5px 15px; 
+    background:rgb(199, 177, 152); 
+    color: rgb(255, 251, 241);
+    border:0 none;
+    cursor:pointer;
+    font-size: 1rem;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.col-example{
+    background-position: center;
+    transition-property: opacity;
+    color: black;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height:100%;
+}
+  
+.col-example::after{
+    content: "";
+    position:absoulte;
+    background: rgba(221, 27, 27, 0);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+nav > ul {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(89, 110, 121);
+    font-family: 'Poppins', sans-serif;
+    list-style: none; /* 移除項目符號 */
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding: 0;
+}
+
+nav a {
+    color: inherit; /*超連結顏色*/
+    text-decoration: none; /*超連結底線*/
+    display: block; /*整條都可以超連結*/
+    font-size: 1.3rem; /*字大小*/
+    padding: 20px; /*行距*/
+    
+}
+
+nav a:hover {
+    background-color: rgb(199, 177, 152);
+    color: rgb(255, 255, 255);
+}
+
+.flex-nav {
+    display: flex;
+    justify-content: center;
+}

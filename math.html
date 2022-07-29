@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'> 
+        <link rel="stylesheet" href="CSS/math.css">
+        <script src="JS/math.js"> </script>
+        <meta name = "description" content = "lots of math">
+        <meta name = "author" content = "Sophia Cheng">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+        
+        <title>math</title>
+    </head>
+    <body>
+        <div class="container" style="font-family: 'Hina Mincho', serif;">
+            <div class="row">
+                <div class="col-md-12 col-example">
+                    <div class="center">
+                        <h1>Calculator</h1>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <div style="font-family: 'Hina Mincho', serif;"class="center">
+            <nav>
+                <ul class="flex-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about me.html">About Me</a></li>
+                    <li><a href="leetcode.html">Leetcode</a></li>
+                    <li><a href="uva.html">UVa</a></li>
+                    <li><a href="2021 watched.html">2021 Watched</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr>
+        <form class = 'center'>
+            &emsp;<input type="text" id = "up" placeholder="number"><br>
+            <p>C</p>
+            &emsp;<input type="text" id = "down" placeholder="number">
+            <br><br><input type = "button" id = 'button' value = "送出" onclick="cal()"></input>
+            <p id='answer'></p>
+        </form>
+    </body>
+</html>
