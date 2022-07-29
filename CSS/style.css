@@ -148,7 +148,7 @@
         text-decoration: none; /*超連結底線*/
         display: block; /*整條都可以超連結*/
         font-size: 130%; /*字大小*/
-        padding: 3.5%;/*行距*/
+        padding: 7%;/*行距*/
     }
     
     nav a:hover {
