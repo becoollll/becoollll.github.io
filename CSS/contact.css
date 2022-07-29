@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+@media only screen and (min-width: 769px) { /*for computer*/
+    body{
+        background-color: rgb(240, 236, 227);
+    }
+
+    h1{
+        color: rgb(199, 177, 152); 
+        font-size: 350%;
+        font-family: 'EB Garamond', serif;
+    }
+
+    p{
+        font-size: 100%;
+        color: rgb(89, 110, 121);
+        font-family: 'EB Garamond', serif;
+    }
+    
+
+    hr{
+        background-color:rgb(223, 211, 195); 
+        height:3px; 
+        border: none;
+    }
+    img{
+        max-width: 25%;
+    }
+
+    a{
+        font-size: 200%;
+    }
+
+    #container {/*留白*/
+        padding-top:1.5%;
+        padding-left:3%;
+        padding-right:3%;
+        padding-bottom:4%;
+        border: 6.25% solid 000000;
+    }
+    .outer {
+        position: relative;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+    }
+    .wi{
+        width: 300px;
+        height:100px;
+    }
+    .center{
+        text-align: center;
+    }
+    .col-example{
+        background-position: center;
+        transition-property: opacity;
+        color: black;
+        position: relative;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height:100%;
+    }
+    
+    .col-example::after{
+        content: "";
+        position:absoulte;
+        background: rgba(221, 27, 27, 0);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height:100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    nav > ul {
+        background-color: rgba(255, 255, 255, 0);
+        color: rgb(89, 110, 121);
+        font-family: 'Poppins', sans-serif;
+        list-style: none; /* 移除項目符號 */
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        padding: 0;
+    }
+
+    nav a {
+        color: inherit; /*超連結顏色*/
+        text-decoration: none; /*超連結底線*/
+        display: block; /*整條都可以超連結*/
+        font-size: 170%; /*字大小*/
+        padding: 20px; /*行距*/
+        font-family: 'EB Garamond', serif;
+    }
+
+    nav a:hover {
+        background-color: rgb(199, 177, 152);
+        color: rgb(255, 255, 255);
+    }
+
+    .flex-nav {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+@media only screen and (max-width: 769px) { 
+    body{
+        background-color: rgb(240, 236, 227);
+    }
+
+    h1{
+        color: rgb(199, 177, 152); 
+        font-size: 200%;
+        font-family: 'EB Garamond', serif;
+    }
+
+    p{
+        font-size: 90%;
+        color: rgb(89, 110, 121);
+        font-family: 'EB Garamond', serif;
+    }
+    
+
+    hr{
+        background-color:rgb(223, 211, 195); 
+        height:3px; 
+        border:none;
+    }
+    img{
+        max-width: 25%;
+    }
+
+    a{
+        font-size: 100%;
+        text-align: center; 
+    }
+
+    #container {/*留白*/
+        padding-top:1.5%;
+        padding-left:3%;
+        padding-right:3%;
+        padding-bottom:4%;
+        border: 6.25% solid 000000;
+    }
+    .outer {
+        text-align: center; 
+    }
+    .wi{
+        margin-top: 12%;
+    }
+    .center{
+        text-align: center;
+    }
+    .col-example{
+        background-position: center;
+        transition-property: opacity;
+        color: black;
+        position: relative;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height:100%;
+    }
+    
+    .col-example::after{
+        content: "";
+        position:absoulte;
+        background: rgba(221, 27, 27, 0);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height:100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    nav > ul {
+        background-color: rgba(255, 255, 255, 0);
+        color: rgb(89, 110, 121);
+        font-family: 'Poppins', sans-serif;
+        list-style: none; /* 移除項目符號 */
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        padding: 0;
+    }
+
+    nav a {
+        color: inherit; /*超連結顏色*/
+        text-decoration: none; /*超連結底線*/
+        display: block; /*整條都可以超連結*/
+        font-size: 100%; /*字大小*/
+        padding: 3.5%; /*行距*/
+        font-family: 'EB Garamond', serif;
+    }
+
+    nav a:hover {
+        background-color: rgb(199, 177, 152);
+        color: rgb(255, 255, 255);
+    }
+
+}
