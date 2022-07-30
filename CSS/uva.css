@@ -1,87 +1,366 @@
-body{
-    background-color: rgb(58, 58, 58);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+html {
+    scroll-behavior: smooth;
 }
+@media only screen and (min-width: 769px) {
+    .menu{
+        padding-top: 3%;
+    }
+    /*for computer*/
+    ul {
+        /* 取消ul預設的內縮及樣式 */
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
 
-.center{
-    text-align: center;
-}
+    ul.drop-down-menu {
+        border: #ccc 1px solid;
+        display: inline-block;
+        font-family: 'Poppins', sans-serif;
+        font-size: 120%;
+    }
 
-.col-example{
-    background-position: center;
-    transition-property: opacity;
-    color: rgb(0, 0, 0);
-    position: relative;
-    justify-content: center;
-    display: flex;
-    width: 100%;
-    height:100%;
-}
-  
-.col-example::after{
-    content: "";
-    position:absoulte;
-    background: rgba(212, 203, 203, 0);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height:100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-}
+    ul.drop-down-menu li {
+        position: relative;
+        white-space: nowrap;
+        border-right: #ccc 1px solid;
+    }
 
-nav > ul {
-    background-color: rgba(255, 255, 255, 0);
-    list-style: none;   /* 移除項目符號 */
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    padding: 0;
-}
+    ul.drop-down-menu a {
+        background-color: #fff;
+        color: #333;
+        display: block;
+        padding: 0 30px;
+        text-decoration: none;
+        line-height: 40px;
+    }
 
-nav a {
-    color: inherit; /*超連結顏色*/
-    text-decoration: none; /*超連結底線*/
-    display: block; /*整條都可以超連結*/
-    font-size: 5vmin; /*字大小*/
-    padding: 20px;/*行距*/
+    ul.drop-down-menu a:hover {
+        /* 滑鼠滑入按鈕變色*/
+        background-color: rgb(240, 203, 38);
+        color: #fff;
+    }
+
+    ul.drop-down-menu li:hover>a {
+        /* 滑鼠移入次選單上層按鈕保持變色*/
+        background-color: rgb(240, 203, 38);
+        color: #fff;
+    }
+
+    ul.drop-down-menu ul {
+        border: #ccc 1px solid;
+        position: absolute;
+        z-index: 99;
+        left: -1px;
+        top: 100%;
+        
+    }
     
-}
+    ul.drop-down-menu ul {
+        /*隱藏次選單*/
+        display: none;
+    }
 
-nav a:hover {
-    background-color: rgb(240, 203, 38);
-    color: black;
-}
+    ul.drop-down-menu li:hover>ul {
+        /* 滑鼠滑入展開次選單*/
+        display: block;
+    }
 
-.flex-nav {
-    display: flex;
-    justify-content: center;
-}
+    body {
+        background-color: rgb(58, 58, 58);
+    }
 
-pre {
-    margin-left: 5%;
-    margin-right: 5%;
-    background: rgb(199, 176, 176);
-    line-height: normal;
-    margin-bottom: 1.5m;
-    padding-top: 0%;
-    padding-bottom: 3%;
-    padding-left: 0.5%;
-    padding-right: 0.5%;
-    overflow: auto;
-    max-width: 100%;
+    .center {
+        text-align: center;
+    }
+
+    .col-example {
+        background-position: center;
+        transition-property: opacity;
+        color: rgb(0, 0, 0);
+        position: relative;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .col-example::after {
+        content: "";
+        position: absoulte;
+        background: rgba(212, 203, 203, 0);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    h1 {
+        font-family: 'Lobster', cursive;
+        color: rgb(240, 203, 38);
+        font-size: 350%;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    nav>ul {
+        background-color: rgba(255, 255, 255, 0);
+        list-style: none;
+        /* 移除項目符號 */
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        padding: 0;
+    }
+
+    nav a {
+        color: inherit;
+        /*超連結顏色*/
+        text-decoration: none;
+        /*超連結底線*/
+        display: block;
+        /*整條都可以超連結*/
+        font-size: 170%;
+        /*字大小*/
+        padding: 20px;
+        /*行距*/
+        font-family: 'Lobster', cursive;
+        font-weight: 400;
+    }
+
+    nav a:hover {
+        background-color: rgb(240, 203, 38);
+        color: black;
+    }
+
+    .flex-nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    pre {
+        margin-left: 5%;
+        margin-right: 5%;
+        /*background: rgb(199, 176, 176);*/
+        line-height: normal;
+        padding-top: 0%;
+        padding-bottom: 3%;
+        padding-left: 0.5%;
+        padding-right: 0.5%;
+        overflow: auto;
+        max-width: 100%;
+    }
+
+    code {
+        /*font-family: 'Azeret Mono', monospace;*/
+        font-size: 130%;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .ll{
+        font-size: 100%;
+        display:inline;
+    }
+    p {
+        margin-left: 5.5%;
+        font-weight: 550;
+        color: rgb(236, 179, 179);
+        font-size: 180%;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .annotation {
+        color: rgb(141, 140, 140);
+    }
 }
-a{
-    color: inherit;
-    text-decoration: none;
-}
-p{
-    margin-left: 5%;
-}
-.annotation{
-    color: rgb(141, 140, 140);
+@media only screen and (max-width: 769px) {
+    .menu{
+        padding-top: 3%;
+    }
+    /*for computer*/
+    ul {
+        /* 取消ul預設的內縮及樣式 */
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    ul.drop-down-menu {
+        border: #ccc 1px solid;
+        display: inline-block;
+        font-family: 'Poppins', sans-serif;
+        font-size: 80%;
+    }
+
+    ul.drop-down-menu li {
+        position: relative;
+        white-space: nowrap;
+        border-right: #ccc 1px solid;
+    }
+
+    ul.drop-down-menu a {
+        background-color: #fff;
+        color: #333;
+        display: block;
+        padding: 0 30px;
+        text-decoration: none;
+        line-height: 40px;
+    }
+
+    ul.drop-down-menu a:hover {
+        /* 滑鼠滑入按鈕變色*/
+        background-color: rgb(240, 203, 38);
+        color: #fff;
+    }
+
+    ul.drop-down-menu li:hover>a {
+        /* 滑鼠移入次選單上層按鈕保持變色*/
+        background-color: rgb(240, 203, 38);
+        color: #fff;
+    }
+
+    ul.drop-down-menu ul {
+        border: #ccc 1px solid;
+        position: absolute;
+        z-index: 99;
+        left: -1px;
+        top: 100%;
+        
+    }
+    
+    ul.drop-down-menu ul {
+        /*隱藏次選單*/
+        display: none;
+    }
+
+    ul.drop-down-menu li:hover>ul {
+        /* 滑鼠滑入展開次選單*/
+        display: block;
+    }
+
+    body {
+        background-color: rgb(58, 58, 58);
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .col-example {
+        background-position: center;
+        transition-property: opacity;
+        color: rgb(0, 0, 0);
+        position: relative;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .col-example::after {
+        content: "";
+        position: absoulte;
+        background: rgba(212, 203, 203, 0);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    h1 {
+        font-family: 'Lobster', cursive;
+        color: rgb(240, 203, 38);
+        font-size: 200%;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .ll{
+        font-size: 65%;
+        display:inline;
+    }
+
+    nav>ul {
+        background-color: rgba(255, 255, 255, 0);
+        list-style: none;
+        /* 移除項目符號 */
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        padding: 0;
+    }
+
+    nav a {
+        color: inherit;
+        /*超連結顏色*/
+        text-decoration: none;
+        /*超連結底線*/
+        display: block;
+        /*整條都可以超連結*/
+        font-size: 105%; /*字大小*/
+        padding: 3.5%; /*行距*/
+        font-family: 'Lobster', cursive;
+        font-weight: 400;
+    }
+
+    nav a:hover {
+        background-color: rgb(240, 203, 38);
+        color: black;
+    }
+
+
+    pre {
+        margin-left: 5%;
+        margin-right: 5%;
+        /*background: rgb(199, 176, 176);*/
+        line-height: normal;
+        padding-top: 0%;
+        padding-bottom: 3%;
+        padding-left: 0.5%;
+        padding-right: 0.5%;
+        overflow: auto;
+        max-width: 100%;
+    }
+
+    code {
+        /*font-family: 'Azeret Mono', monospace;*/
+        font-size: 100%;
+    }
+
+    a {
+        color: inherit;
+        color: rgb(236, 179, 179);
+        text-decoration: none;
+    }
+
+    p {
+        margin-left: 5.5%;
+        font-weight: 550;
+        color: rgb(236, 179, 179);
+        font-size: 120%;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .annotation {
+        color: rgb(141, 140, 140);
+    }
 }

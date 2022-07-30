@@ -6,13 +6,11 @@
         <meta name = "author" content = "Sophia Cheng">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">    
         <link rel="stylesheet" href="CSS/uva.css">
-
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/equilibrium-light.min.css">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
         <!--font-->
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-        </style>  
+
         <!--for icon-->
         <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
         <title>UVa Solution</title>
@@ -25,37 +23,48 @@
         
     </head>
     <body>
-        <div class="container" style="font-family: 'Lobster', cursive; font-weight: 800;">
-            <div class="row">
-                <div class="col-md-12 col-example">
-                    <div class="center">
-                        <br><br>
-                        <div style="color: rgb(240, 203, 38); font-size: 10vmin;">Sophia's UVa Solution</div>
-                        <br>
-                    </div>
-                </div>                
-            </div>
+        <div class="center row col-md-12 col-example"></div>
+
+            <h1>Sophia's UVa Solution</h1>
         </div>
-        <div style="font-family: 'Lobster', cursive; font-weight: 600;" class="center">
+        <div class="center">
             <nav style="color: rgb(255, 255, 255);">
                 <ul class="flex-nav">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about me.html">About Me</a></li>
                     <li><a href="leetcode.html">Leetcode</a></li>
-                    <li><a href="2021 watched.html">2021 Watched</a></li>
+                    <li><a href="math.html">Calculator</a></li>
+                    <li><a href="2021 watched.html">Movies</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
                 </ul>
             </nav>
         </div>
         <hr style='background-color:rgb(71, 223, 152); height:1vmin; border:none;''/>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(236, 179, 179);font-size: 25px;">
-                <br>
-                <p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3170">12019 - Doom's Day Algorithm</a></p>
-            </div>
+        <div class="center menu">
+            <ul class="drop-down-menu">
+                <li>
+                    <a href="#">--- choose a problem ---</a>
+                    <ul>
+                        <li>
+                            <a href="#12019">12019</a>
+                        </li>
+                        <li>
+                            <a href="#11498">11498</a>
+                        </li>
+                        <li>
+                            <a href="#11455">11455</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                </ul>
+        </div>
+        <div id="12019">
+            <br>
+            <p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3170">12019 - Doom's Day Algorithm</a></p>
         </div>
         <pre>
-            <code style="color:rgb(48, 43, 43);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-#include &lt;iostream>
+            <code class="C++">#include &lt;iostream>
 using namespace std;
                     
 int main(){
@@ -74,19 +83,16 @@ int main(){
         }
         a+=day;
         a%=7;
-        cout &Lt; week[a] &Lt; endl;
+        cout &lt;&lt; week[a] &lt;&lt; endl;
     }
     return 0;
 }</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(236, 179, 179);font-size: 25px;">
-                <br>
-                <p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2493">11498 - Division of Nlogonia</a></p>
-            </div>
+        <div id="11498">
+            <br>
+            <p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2493">11498 - Division of Nlogonia</a></p>
         </div>
         <pre>
-            <code style="color:rgb(48, 43, 43);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-#include&lt;iostream>
+            <code>#include&lt;iostream>
 using namespace std;
                     
 int main(){
@@ -96,39 +102,36 @@ int main(){
         if(k == 0){
             break;
         }
-        int n, m;//參考
+        int n, m;
         cin >> n >> m;
         while(k--){
             int x, y;
             cin >> x >> y;
             if(x == n || y == m){
-                cout &Lt; "divisa" &Lt; endl;
+                cout &lt;&lt; "divisa" &lt;&lt; endl;
             }
             if(x > n && y > m){
-                cout &Lt; "NE" &Lt; endl;
+                cout &lt;&lt; "NE" &lt;&lt; endl;
             }
             if(x > n && y &lt; m){
-                cout &Lt; "SE" &Lt; endl;
+                cout &lt;&lt; "SE" &lt;&lt; endl;
             }
             if(x &lt; n && y > m){
-                cout &Lt; "NO" &Lt; endl;
+                cout &lt;&lt; "NO" &lt;&lt; endl;
             }
             if(x &lt; n && y &lt; m){
-                cout &Lt; "SO" &Lt; endl;
+                cout &lt;&lt; "SO" &lt;&lt; endl;
             }
         }
     }
     return 0;
 }</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(236, 179, 179);font-size: 25px;">
-                <br>
-                <p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2450">11455 - Behold my quadrangle</a></p>
-            </div>
+        <div id="11455">
+            <br>
+            <p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2450">11455 - Behold my quadrangle</a></p>
         </div>
         <pre>
-            <code style="color:rgb(48, 43, 43);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-#include &lt;iostream>
+            <code>#include &lt;iostream>
 #include &lt;vector>
 #include &lt;lgorithm>
 using namespace std;
@@ -143,16 +146,16 @@ int main(){
         }
         sort(kk,kk+4);
         if(kk[0]==kk[3]){
-            cout &Lt; "square" &Lt; endl;
+            cout &lt;&lt; "square" &lt;&lt; endl;
         }
         else if(kk[0]==kk[1] && kk[2]==kk[3]){
-            cout &Lt; "rectangle" &Lt; endl;
+            cout &lt;&lt; "rectangle" &lt;&lt; endl;
         }
         else if(kk[0]+kk[1]+kk[2] >= kk[3]){
-            cout &Lt; "quadrangle" &Lt; endl;
+            cout &lt;&lt; "quadrangle" &lt;&lt; endl;
         }
         else{
-            cout &Lt; "banana" &Lt; endl;
+            cout &lt;&lt; "banana" &lt;&lt; endl;
         }
     }
 }</code></pre>
@@ -161,18 +164,29 @@ int main(){
         <br>
         <br>
         <div class="center">
-            <a href="https://www.facebook.com/profile.php?id=100009630198734"><i class="fab fa-facebook fa-3x" style="color: rgb(158, 128, 206);"></a></i>
+            <div class="ll">
+                <a href="https://www.facebook.com/profile.php?id=100009630198734" target="_blank"><i class="fab fa-facebook fa-3x" style="color: rgb(158, 128, 206);"></a></i>
+            </div>
             &emsp;
-            &emsp;   
-            <a href="https://www.instagram.com/yj429_/"><i class="fab fa-instagram fa-3x" style="color: rgb(233, 162, 162);"></a></i>
+            &emsp;  
+            <div class="ll"> 
+                <a href="https://www.instagram.com/yj429_/" target="_blank"><i class="fab fa-instagram fa-3x" style="color: rgb(233, 162, 162);"></a></i>
+            </div>
             &emsp;
             &emsp;
-            <a href="https://github.com/becoollll"><i class="fab fa-github fa-3x" style="color: rgb(153, 213, 221);"></a></i>
+            <div class="ll"> 
+                <a href="https://github.com/becoollll" target="_blank"><i class="fab fa-github fa-3x" style="color: rgb(153, 213, 221);"></a></i>
+            </div>
+            &emsp;
+            &emsp;
+            <div class="ll"> 
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sophia910429@gmail.com" target="_blank"><i class="fa fa-envelope fa-3x" style="color: rgb(226, 153, 85);"></a></i>
+            </div>
         </div>
         <br>
-        <div class="center"; style="font-family: 'Lobster', cursive; font-size: 3vmin; color:rgb(240, 203, 38);">
+        <div class="center"; style="font-family: 'Lobster', cursive; font-size: 100%; color:rgb(240, 203, 38);">
             <br>
-            <a>Copyright © 2021 Sophia Cheng, All Rights Reserved.</a>
+            <font style="font-size: 100%; font-weight: 300;">Copyright © 2021-2022 Sophia Cheng, All Rights Reserved.</font>
             <br><br>
         </div>
     </body>
