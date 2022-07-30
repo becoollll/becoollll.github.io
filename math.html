@@ -4,25 +4,21 @@
         <meta charset='utf-8'> 
         <link rel="stylesheet" href="CSS/math.css">
         <script src="JS/math.js"> </script>
-        <meta name = "description" content = "lots of math">
+        <meta name = "description" content = "This is a Conbination Calculator!">
         <meta name = "author" content = "Sophia Cheng">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
 
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
         <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-        
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
         <title>math</title>
     </head>
     <body>
-        <div class="container" style="font-family: 'Hina Mincho', serif;">
-            <div class="row">
-                <div class="col-md-12 col-example">
-                    <div class="center">
-                        <h1>Calculator</h1>
-                    </div>
-                </div>                
-            </div>
+        <div class="container row col-md-12 col-example center">
+            <br><br>
+            <h1>Conbination Calculator</h1>
+            <br><br>
         </div>
         <div style="font-family: 'Hina Mincho', serif;"class="center">
             <nav>
@@ -31,17 +27,46 @@
                     <li><a href="about me.html">About Me</a></li>
                     <li><a href="leetcode.html">Leetcode</a></li>
                     <li><a href="uva.html">UVa</a></li>
-                    <li><a href="2021 watched.html">2021 Watched</a></li>
+                    <li><a href="2021 watched.html">movies</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
                 </ul>
             </nav>
         </div>
         <hr>
+        <div class="formula center" style="padding: 3.0% 0% 3.5%;">
+            <font>`C(n,r)=[n!]/[r!(n-r)!]`</font>
+        </div>
         <form class = 'center'>
-            &emsp;<input type="text" id = "up" placeholder="number"><br>
-            <p>C</p>
-            &emsp;<input type="text" id = "down" placeholder="number">
-            <br><br><input type = "button" id = 'button' value = "送出" onclick="cal()"></input>
-            <p id='answer'></p>
+            <div class="nn">
+                <p class="nnn">n</p><input type="text" id = "up" placeholder="n"><br>
+            </div>
+            <div class="rr">
+                <p class="rrr">r</p><input type="text" id = "down" placeholder="r">
+            </div>
+            <input type = "button" id = 'button' value = "送出" onclick="cal()"></input>
+            <div>
+                <br><p id='answer'></p>
+            </div>
         </form>
+        <div style="padding: 2%;"></div>
+        <footer>
+            <div class="center">
+                <a href="https://www.facebook.com/profile.php?id=100009630198734" target="_blank"><i class="fab fa-facebook fa-3x" style="color: #706666;"></a></i>
+                &emsp;
+                &emsp;   
+                <a href="https://www.instagram.com/yj429_/" target="_blank"><i class="fab fa-instagram fa-3x" style="color: #706666;"></a></i>
+                &emsp;
+                &emsp;
+                <a href="https://github.com/becoollll" target="_blank"><i class="fab fa-github fa-3x" style="color: #706666;"></a></i>
+                &emsp;
+                &emsp;
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sophia910429@gmail.com" target="_blank"><i class="fa fa-envelope fa-3x" style="color: #706666;"></a></i>
+            </div>
+            <br>
+            <div class="center">
+                <b>Copyright © 2021-2022 Sophia Cheng, All Rights Reserved.</b>
+                <br>
+            </div>
+        </footer>
     </body>
 </html>
