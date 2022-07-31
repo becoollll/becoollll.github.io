@@ -8,6 +8,24 @@ html {
     .menu{
         padding-top: 3%;
     }
+    #rightBar {
+        z-index: 9999;
+        width: 50px;
+        position: fixed;
+        right: 50px;
+        bottom: 5%;
+        height: auto;
+    }
+    
+    #rightBar .btn {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 20px;
+        display: inline-block;
+        border-radius: 10px;
+        cursor: pointer;
+    }
     /*for computer*/
     ul {
         /* 取消ul預設的內縮及樣式 */
@@ -188,6 +206,24 @@ html {
 @media only screen and (max-width: 769px) {
     .menu{
         padding-top: 3%;
+    }
+    #rightBar {
+        z-index: 9999;
+        width: 5%;
+        position: fixed;
+        right: 15%;
+        bottom: 1.5%;
+        height: auto;
+    }
+    
+    #rightBar .btn {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 20%;
+        display: inline-block;
+        border-radius: 10px;
+        cursor: pointer;
     }
     /*for computer*/
     ul {
