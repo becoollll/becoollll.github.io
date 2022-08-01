@@ -389,10 +389,7 @@ html {
     }
 
     .pic{
-        margin-left: 5%;
-        padding-left: 0.5%;
-        padding-bottom: 3%;
-        width: 89%;
+        display: none;
     }
 
     a {
