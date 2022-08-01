@@ -183,6 +183,12 @@ html {
         /*font-family: 'Azeret Mono', monospace;*/
         font-size: 130%;
     }
+    .pic{
+        margin-left: 5%;
+        padding-left: 0.5%;
+        padding-bottom: 3%;
+        width: 60%;
+    }
     a {
         color: inherit;
         text-decoration: none;
@@ -380,6 +386,13 @@ html {
     code {
         /*font-family: 'Azeret Mono', monospace;*/
         font-size: 100%;
+    }
+
+    .pic{
+        margin-left: 5%;
+        padding-left: 0.5%;
+        padding-bottom: 3%;
+        width: 89%;
     }
 
     a {
