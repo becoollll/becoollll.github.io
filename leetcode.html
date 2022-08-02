@@ -6,13 +6,9 @@
         <meta name = "author" content = "Sophia Cheng">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">    
         <link rel="stylesheet" href="CSS/leetcode.css">
+        <script src="JS/hightlight.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
 
-        <!--font-->
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
-
-        </style>  
         <!--for icon-->
         <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
         <title>Leetcode Solution</title>
@@ -24,64 +20,62 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
     </head>
-    <!--
-        <button onclick="topFunction()" id="myBtn" title="Gotop" style="width: 10vmin;height: 10vmin;">
-            <div style="font-family: 'Poppins', sans-serif; font-weight: 600;">
-                <p>top</p>
-            </div>
-        </button>
-    <script>
-        window.onscroll = scrollFunction; //每當畫面捲動觸發一次
 
-        function scrollFunction() { 
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            document.getElementById("myBtn").style.display = "block";
-        } else {
-            document.getElementById("myBtn").style.display = "none";
-        }
-        }//網頁捲動超過200pixel就會跑出來 display設定成block 跑回上面就隱藏。
-
-        // 重置scrollTop這個變數的值
-        function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-    </script>-->
     <body>
-        <div class="container" style="font-family: 'Poppins', sans-serif; font-weight: 800;">
-            <div class="row">
-                <div class="col-md-12 col-example">
-                    <div class="center">
-                        <p> </p>
-                        <font style="color: rgb(126, 54, 173);font-size: 10vmin;">Sophia's Leetcode Solution</font>
-                        
-                    </div>
-                </div>                
-            </div>
+        <div id="rightBar">
+            <div class="btn" id="shougongBtn"><span><a href="javascript:%20window.scrollTo(0,%200);"><img src="PIC/gotopp.png" style="opacity: 0.7"/></a></span></div>
         </div>
-        <div style="font-family: 'Poppins', sans-serif; font-weight: 600;" class="center">
-            <nav style="color: rgb(211, 169, 54);">
+        <div class="center row col-md-12 col-example"></div>
+            <h1>Sophia's Leetcode Solution</h1>
+        </div>
+        <div class="center">
+            <nav>
                 <ul class="flex-nav">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about me.html">About Me</a></li>
                     <li><a href="uva.html">UVa</a></li>
-                    <li><a href="2021 watched.html">2021 Watched</a></li>
+                    <li><a href="math.html">Calculator</a></li>
+                    <li><a href="2021 watched.html">Movies</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
                 </ul>
             </nav>
         </div>
-        <hr style='background-color:rgb(103, 160, 133); height:1vmin; border:none;''/>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>1. Two Sum (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 880 ms<br>Memory Usage: 10.1 MB</p>
-            </div>
+        <hr>
+        <div class="center menu">
+            <ul class="drop-down-menu">
+                <li>
+                    <a href="#">--- choose a problem ---</a>
+                    <ul>
+                        <li><a href="#1">1</a></li>
+                        <li><a href="#7">7</a></li>
+                        <li><a href="#9">9</a></li>
+                        <li><a href="#14">14</a></li>
+                        <li><a href="#21">21</a></li>
+                        <li><a href="#26">26</a></li>
+                        <li><a href="#27">27</a></li>
+                        <li><a href="#35">35</a></li>
+                        <li><a href="#58">58</a></li>
+                        <li><a href="#66">66</a></li>
+                        <li><a href="#70">70</a></li>
+                        <li><a href="#83">83</a></li>
+                        <li><a href="#88">88</a></li>
+                        <li><a href="#100">100</a></li>
+                        <li><a href="#118">118</a></li>
+                        <li><a href="#119">119</a></li>
+                        <li><a href="#136">136</a></li>
+                        <li><a href="#172">172</a></li>
+                    </ul>
+                </li>
+                </ul>
+        </div>
+        <div class="ti" id="1">
+            <a href="https://leetcode.com/problems/two-sum/" target="_blank"><p>1. Two Sum (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 880 ms<br>Memory Usage: 10.1 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     vector&lt;int> twoSum(vector&lt;int>& nums, int target){
         vector&lt;int> a,ans;
@@ -102,19 +96,14 @@ class Solution {
         return ans;
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>7. Reverse Integer (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 0 ms<br>Memory Usage: 5.9 MB</p>
-            </div>
+        <div class="ti" id="7">
+            <a href="https://leetcode.com/problems/reverse-integer/" target="_blank"><p>7. Reverse Integer (Easy)</p></a>
         </div>
-        
+        <div class="RnM">
+            <p>Runtime: 0 ms<br>Memory Usage: 5.9 MB</p>
+        </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     int reverse(int x) {
         if(x == 0){
@@ -147,19 +136,15 @@ class Solution {
         }
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>9. Palindrome Number (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 0 ms<br>Memory Usage: 5.8 MB</p>
-            </div>
+
+        <div class="ti" id="9">
+            <a href="https://leetcode.com/problems/palindrome-number/" target="_blank"><p>9. Palindrome Number (Easy)</p></a>
         </div>
-        
+        <div class="RnM">
+            <p>Runtime: 0 ms<br>Memory Usage: 5.8 MB</p>
+        </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     bool isPalindrome(int x){
         long long unsigned int sum = 0, n = x;
@@ -174,19 +159,15 @@ class Solution {
         return (sum == n);
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>14. Longest Common Prefix (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 0 ms<br>Memory Usage: 9 MB</p>
-            </div>
+
+        <div class="ti" id="14">
+            <a href="https://leetcode.com/problems/longest-common-prefix/" target="_blank"><p>14. Longest Common Prefix (Easy)</p></a>
         </div>
-        
+        <div class="RnM">
+            <p>Runtime: 0 ms<br>Memory Usage: 9 MB</p>
+        </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     string longestCommonPrefix(vector&lt;string>& strs) {
         string ans = strs[0];
@@ -200,19 +181,15 @@ class Solution {
         return ans;
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>21. Merge Two Sorted Lists (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 12 ms<br>Memory Usage: 14.8 MB</p>
-            </div>
-        </div>
 
+        <div class="ti" id="21">
+            <a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank"><p>21. Merge Two Sorted Lists (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 12 ms<br>Memory Usage: 14.8 MB</p>
+        </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
         if(l1 == NULL){
@@ -251,18 +228,14 @@ class Solution {
         return head;
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>26. Remove Duplicates from Sorted Array (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 20 ms<br>Memory Usage: 8.8 MB</p>
-            </div>
+        <div class="ti" id="26">
+            <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/" target="_blank"><p>26. Remove Duplicates from Sorted Array (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 20 ms<br>Memory Usage: 8.8 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     int removeDuplicates(int* nums, int numsSize) {
     if (numsSize==0)
         return 0;
@@ -279,18 +252,14 @@ class Solution {
 
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>27. Remove Element (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 0 ms<br>Memory Usage: 8.8 MB</p>
-            </div>
+        <div class="ti" id="27">
+            <a href="https://leetcode.com/problems/remove-element/" target="_blank"><p>27. Remove Element (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 0 ms<br>Memory Usage: 8.8 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     int removeElement(vector&lt;int>& nums, int val) {
         int len = 0;
@@ -303,18 +272,15 @@ class Solution {
         return len;
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>35. Search Insert Position (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 4 ms<br>Memory Usage: 9.6 MB</p>
-            </div>
+
+        <div class="ti" id="35">
+            <a href="https://leetcode.com/problems/search-insert-position/" target="_blank"><p>35. Search Insert Position (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 4 ms<br>Memory Usage: 9.6 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
         int searchInsert(vector&lt;int>& nums, int target) {
         for(int i = 0; i &lt; nums.size(); i++){
@@ -326,18 +292,15 @@ class Solution {
         return nums.size();
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>58. Length of Last Word (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 4 ms<br>Memory Usage: 6.6 MB</p>
-            </div>
+
+        <div class="ti" id="58">
+            <a href="https://leetcode.com/problems/length-of-last-word/" target="_blank"><p>58. Length of Last Word (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 4 ms<br>Memory Usage: 6.6 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     int lengthOfLastWord(string s) {
             int c = 0;
@@ -352,18 +315,14 @@ class Solution {
             return c;
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>66. Plus One (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 0 ms<br>Memory Usage: 8.8 MB</p>
-            </div>
+        <div class="ti" id="66">
+            <a href="https://leetcode.com/problems/plus-one/" target="_blank"><p>66. Plus One (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 0 ms<br>Memory Usage: 8.8 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
         vector&lt;int> plusOne(vector&lt;int>& digits) {
         for(int i = digits.size()-1; i >= 0; i--){
@@ -381,18 +340,15 @@ class Solution {
         return digits;
     }     
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>70. Climbing Stairs (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 0 ms<br>Memory Usage: 5.9 MB</p>
-            </div>
+
+        <div class="ti" id="70">
+            <a href="https://leetcode.com/problems/climbing-stairs/" target="_blank"><p>70. Climbing Stairs (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 0 ms<br>Memory Usage: 5.9 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     int climbStairs(int n){
         if(n &lt;= 0){
@@ -413,18 +369,15 @@ class Solution {
         return vt[n-1];
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>83. Remove Duplicates from Sorted List (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 12 ms<br>Memory Usage: 11.5 MB</p>
-            </div>
+
+        <div class="ti" id="83">
+            <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/" target="_blank"><p>83. Remove Duplicates from Sorted List (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 12 ms<br>Memory Usage: 11.5 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     ListNode* deleteDuplicates(ListNode* head) {
         ListNode *temp = head;
@@ -439,18 +392,15 @@ class Solution {
         return head;
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>88. Merge Sorted Array (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 4 ms<br>Memory Usage: 9.1 MB</p>
-            </div>
+
+        <div class="ti" id="88">
+            <a href="https://leetcode.com/problems/merge-sorted-array/" target="_blank"><p>88. Merge Sorted Array (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 4 ms<br>Memory Usage: 9.1 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     void merge(vector&lt;int>& nums1, int m, vector&lt;int>& nums2, int n) {
         int j = 0;
@@ -462,18 +412,14 @@ class Solution {
         sort(nums1.begin(),nums1.end());
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>100. Same Tree (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 0 ms<br>Memory Usage: 10 MB</p>
-            </div>
+        <div class="ti" id="100">
+            <a href="https://leetcode.com/problems/same-tree/" target="_blank"><p>100. Same Tree (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 0 ms<br>Memory Usage: 10 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     bool isSameTree(TreeNode* p, TreeNode* q) {
         if(p == NULL && q == NULL){
@@ -488,18 +434,15 @@ class Solution {
         return (p->val == q->val && isSameTree(p->right, q->right) && isSameTree(p->left, q->left));
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>118. Pascal's Triangle (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 0 ms<br>Memory Usage: 6.6 MB</p>
-            </div>
+
+        <div class="ti" id="118">
+            <a href="https://leetcode.com/problems/pascals-triangle/" target="_blank"><p>118. Pascal's Triangle (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 0 ms<br>Memory Usage: 6.6 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     vector&lt;vector&lt;int>> generate(int numRows) {
 
@@ -529,18 +472,15 @@ class Solution {
         return ans;
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>119. Pascal's Triangle II (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: srgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 0 ms<br>Memory Usage: 6.7 MB</p>
-            </div>
+
+        <div class="ti" id="119">
+            <a href="https://leetcode.com/problems/pascals-triangle-ii/" target="_blank"><p>119. Pascal's Triangle II (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 0 ms<br>Memory Usage: 6.7 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     vector&lt;int> getRow(int rowIndex) {
         vector&lt;vector<int>> ans;
@@ -572,18 +512,15 @@ class Solution {
         return ret;
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>136. Single Number (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 16 ms<br>Memory Usage: 16.9 MB</p>
-            </div>
+
+        <div class="ti" id="136">
+            <a href="https://leetcode.com/problems/single-number/" target="_blank"><p>136. Single Number (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 16 ms<br>Memory Usage: 16.9 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     int singleNumber(vector&lt;int>& nums) {
         int ans = 0;
@@ -605,18 +542,15 @@ class Solution {
         return ans;
     }
 };</code></pre>
-        <div style="font-family: 'Poppins', sans-serif;">
-            <div style="font-weight: 550; color: rgb(34, 36, 168);font-size: 25px;">
-                <br>
-                <p>172. Factorial Trailing Zeroes (Easy)</p>
-            </div>
-            <div style="font-weight: 500; color: rgb(194, 52, 106);font-size: 18px;">
-                <p>Runtime: 0 ms<br>Memory Usage: 5.9 MB</p>
-            </div>
+
+        <div class="ti" id="172">
+            <a href="https://leetcode.com/problems/factorial-trailing-zeroes/" target="_blank"><p>172. Factorial Trailing Zeroes (Easy)</p></a>
+        </div>
+        <div class="RnM">
+            <p>Runtime: 0 ms<br>Memory Usage: 5.9 MB</p>
         </div>
         <pre>
-            <code style="color:rgb(80, 76, 80);font-family: 'Azeret Mono', monospace;font-size: 14px;">
-class Solution {
+            <code>class Solution {
     public:
     int trailingZeroes(int n) {
         int ans = 0;
@@ -631,21 +565,24 @@ class Solution {
     }
 };</code></pre>
         <br>
-        <hr style='background-color:rgb(103, 160, 133); height:1vmin; border:none;''/>
+        <hr>
         <br>
         <br>
         <div class="center">
-            <a href="https://www.facebook.com/profile.php?id=100009630198734"><i class="fab fa-facebook fa-3x" style="color: rgb(142, 116, 185);"></a></i>
+            <a class="ll" href="https://www.facebook.com/profile.php?id=100009630198734" target="_blank"><i class="fab fa-facebook fa-3x" style="color: rgb(142, 116, 185);"></a></i>
             &emsp;
             &emsp;   
-            <a href="https://www.instagram.com/yj429_/"><i class="fab fa-instagram fa-3x" style="color: rgb(185, 116, 116);"></a></i>
+            <a class="ll" href="https://www.instagram.com/yj429_/" target="_blank"><i class="fab fa-instagram fa-3x" style="color: rgb(185, 116, 116);"></a></i>
             &emsp;
             &emsp;
-            <a href="https://github.com/becoollll"><i class="fab fa-github fa-3x" style="color: rgb(116, 177, 185);"></a></i>
+            <a class="ll" href="https://github.com/becoollll" target="_blank"><i class="fab fa-github fa-3x" style="color: rgb(116, 177, 185);"></a></i>
+            &emsp;
+            &emsp;
+            <a class="ll" href="https://mail.google.com/mail/?view=cm&fs=1&to=sophia910429@gmail.com" target="_blank"><i class="fa fa-envelope fa-3x" style="color: rgb(226, 153, 85);"></a></i>
         </div>
         <br>
-        <div class="center" style="font-family:'Poppins', sans-serif; ;color:rgb(153, 26, 26);">
-            <a style="font-size: 3vmin;">Copyright © 2021 Sophia Cheng, All Rights Reserved.</a>
+        <div class="center last">
+            <font style="display: inline;">Copyright © 2021-2022 Sophia Cheng, All Rights Reserved.</font>
         </div>
         <br>
     </body>

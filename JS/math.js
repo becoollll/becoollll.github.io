@@ -9,12 +9,6 @@ function cal() {
             return n * fac(n - 1);
     }
     function combinator(n, m){
-        var temp;
-        if (n < m) {
-            temp = n;
-            n = m;
-            m = temp;
-        }
         return fac(n) / (fac(m) * fac(n - m));
     }
     result = "ans = " + result;
