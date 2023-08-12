@@ -118,7 +118,7 @@ p {
   color: #E0AFA0;
 }
 @media only screen and (max-width: 769px) {
-  .icon {
+  footer .icon {
     font-size: 2em;
   }
 }
