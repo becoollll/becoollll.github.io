@@ -116,6 +116,11 @@ p {
   margin-right: 2%;
   color: #E0AFA0;
 }
+@media only screen and (max-width: 769px) {
+  .icon {
+    font-size: 2em;
+  }
+}
 footer {
   background-color: #8A817C;
   padding-top: 2em;
@@ -124,7 +129,7 @@ footer {
   margin-top: 0px;
 }
 footer p {
-  margin: 2%;
+  margin: 2em;
   color: #E0AFA0;
   padding-bottom: 2%;    
   text-align: center;

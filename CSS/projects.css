@@ -2,7 +2,7 @@
 
 html, body {
   height: 100%;
-  margin-top: 5%;
+  margin-top: 0%;
   padding: 0;
   background-color: #F4F3EE;
   font-family: 'Crimson Text', serif;
@@ -110,11 +110,17 @@ p {
     font-size: 1.5em;
   }
 }
+
 /* footer */
 .icon {
   margin-left: 2%;
   margin-right: 2%;
   color: #E0AFA0;
+}
+@media only screen and (max-width: 769px) {
+  .icon {
+    font-size: 2em;
+  }
 }
 footer {
   background-color: #8A817C;
@@ -144,12 +150,23 @@ footer p {
 .text {
   font-size: 140%;
 }
-.box-card {
-  margin: 5% 0;
-  width: 480px;
+@media only screen and (min-width: 769px) {
+  .box-card {
+    margin: 5% 0;
+    width: 480px;
+  }
+  .el-card img {
+    width: 360px;
+  }
 }
-.el-card img {
-  width: 360px;
+@media only screen and (max-width: 769px) {
+  .box-card {
+    margin: 5% 3%;
+    width: 360px;
+  }
+  .el-card img {
+    width: 280px;
+  }
 }
 
 /* button */
