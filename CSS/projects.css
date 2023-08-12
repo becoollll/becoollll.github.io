@@ -12,20 +12,36 @@ html, body {
 .center{
   text-align: center;
 }
+.a-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  text-align: left;
+  font-size: 110%;
+  color: #8A817C;
+  font-family: 'Roboto Mono', monospace;
+}
 
 /* text */
 p {
   color: #463F3A;
   font-size: 120%;
-}
-.title {
-  font-family: 'Special Elite', cursive;
-  font-size: 130%;
+  text-align: left;
 }
 .work {
   font-size: 130%;
   color: #8A817C;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
 }
+.date {
+    font-size: 100%;
+    color: #BCB8B1;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+  }
 
 /* navbar */
 .el-menu-demo {
@@ -58,21 +74,6 @@ p {
   color: #F4F3EE !important;
 }
 
-/* my pic */
-.circle {
-  margin-top: 7rem;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-}
-
-/* timeline */
-.el-timeline-item__tail { 
-  border-left: 2px solid #E0AFA0; 
-}
-.el-timeline-item__node {
-  background-color: #E0AFA0;
-}
-
 /* footer */
 .icon {
   margin-left: 2%;
@@ -95,10 +96,6 @@ footer p {
 }
 
 /* hr */
-.el-divider {
-  background-color: #BCB8B1;
-  margin:5% 0;
-}
 .el-divider__text{
   background-color: #F4F3EE;
 }
@@ -107,19 +104,70 @@ footer p {
   color:#8A817C;
 }
 
+/* card */
+.text {
+  font-size: 140%;
+}
+.box-card {
+  margin: 5% 0;
+  width: 480px;
+}
+.el-card img {
+  width: 360px;
+}
+
+/* button */
+.el-collapse-item__header {
+  color: #E0AFA0;
+  font-family: 'Roboto Mono', monospace;
+}
+.el-button {
+    border: none;
+    background-color: #F4F3EE;
+    box-shadow:0px 1px 0px 1px rgba(164, 161, 161, 0.363);
+    margin: 4%;
+}
+.el-button:hover{
+    background-color: #fff;
+}
+.button {
+    color: #E0AFA0;
+    font-size: 100%;
+    display: inline;
+    font-family: 'Roboto Mono', monospace;
+}
+.last {
+    margin-bottom: 5%;
+}
+.last .el-button {
+    background-color: #fff;
+}
+.last .el-button:hover {
+    background-color: #F4F3EE;
+}
+
 /* rwd */
 @media screen and (min-width: 800px) {
   .adjust {
     margin-left: 15%;
     margin-right: 15%;
   }
+  .el-divider {
+    background-color: #BCB8B1;
+    margin-top: 15%;
+  }
 }
 @media screen and (max-width: 800px) {
   .block{
     margin-right: 5%;
   }
+  .el-divider {
+    background-color: #BCB8B1;
+    margin-top: 50%;
+  }
 }
 .block {
   margin-bottom: 5%;
 }
+
 

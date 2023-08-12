@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+
+@media only screen and (min-width: 769px) { /*for computer*/
+    body{
+        background-color: rgb(224, 224, 211);
+    }
+
+    .center{
+        text-align: center;
+    }
+    .col-example{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .col-example::after{
+        content: "";
+        position:absoulte;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height:100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    h1{
+        color: rgb(182, 150, 150); 
+        font-size: 350%;
+        font-weight:normal;
+        font-family: 'Hina Mincho', serif;;
+    }
+
+    hr{
+        background-color:rgb(22, 43, 70);
+        height:0.5px; 
+        border:none;
+    }
+
+    p{
+        color: rgb(242,241,234);
+        font-family: 'Hina Mincho', serif;
+        font-size: 130%;
+        display:inline;
+    }
+
+    nav > ul {
+        background-color: rgba(255, 255, 255, 0.568);
+        list-style: none;   /* 移除項目符號 */
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        padding: 0;
+    }
+
+    nav a {
+        font-family: 'Hina Mincho', serif;
+        color: inherit; /*超連結顏色*/
+        text-decoration: none; /*超連結底線*/
+        display: block; /*整條都可以超連結*/
+        font-size: 180%; /*字大小*/
+        padding: 2.5%;/*行距*/
+    }
+
+    nav a:hover {
+        background-color: #687e92;
+        color: white;
+    }
+
+    footer{
+        padding-top: 2%;
+        padding-bottom: 1%;/*2.3em;*/
+        margin-left: -8px;
+        margin-right: -8px;
+        margin-top: 0px;
+        margin-bottom: -10px;
+        background-color: #84909c;
+        color: #ffffff
+    }
+}
+@media only screen and (max-width: 769px) { 
+    body{
+        background-color: rgb(224, 224, 211);
+    }
+    
+    .center{
+        text-align: center;
+    }
+    .col-example{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .col-example::after{
+        content: "";
+        position:absoulte;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height:100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+    
+    h1{
+        color: rgb(182, 150, 150); 
+        font-size: 200%;
+        font-weight:normal;
+        font-family: 'Hina Mincho', serif;;
+    }
+
+    a{
+        font-size: 65%;
+    }
+
+    p{
+        color: rgb(242,241,234);
+        font-family: 'Hina Mincho', serif;
+        font-size: 100%;
+        display:inline;
+    }
+    
+    nav > ul {
+        background-color: rgba(255, 255, 255, 0.568);
+        list-style: none;   /* 移除項目符號 */
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        padding: 0;
+    }
+    nav a {
+        font-family: 'Hina Mincho', serif;
+        color: inherit; /*超連結顏色*/
+        text-decoration: none; /*超連結底線*/
+        display: block; /*整條都可以超連結*/
+        font-size: 130%; /*字大小*/
+        padding: 7%;/*行距*/
+    }
+    
+    nav a:hover {
+        background-color: #687e92;
+        color: white;
+    }
+    
+    footer{
+        padding-top: 2%;
+        padding-bottom: 1%;/*2.3em;*/
+        margin-left: -8px;
+        margin-right: -8px;
+        margin-top: 0px;
+        margin-bottom: -10px;
+        background-color: #84909c;
+        color: #ffffff
+    }
+}
