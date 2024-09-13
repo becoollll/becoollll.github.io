@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>It's Sophia Cheng | Home</title>
+    <title>It's Sophia Cheng | About Me</title>
     <meta charset="UTF-8">
     <meta name = "description" content="Hey! This is Sophia's little website.">
     <meta name = "author" content = "Sophia Cheng">
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <link href="./CSS/style.css" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/dc3fe69ce6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         <div class="center">
             <!--navigation -->
             <el-menu class="el-menu-demo" mode="horizontal" @select="navigateTo" active-text-color="#fff">
-                <el-menu-item index="index.html"><p class="navtext">Home</p></el-menu-item>
+                <el-menu-item index="index.html"><p class="navtext">About Me</p></el-menu-item>
                 <el-menu-item index="projects.html"><p class="navtext">Projects</p></el-menu-item>
             </el-menu>
 
@@ -29,9 +30,10 @@
                 </div>
             </div>
             
-            <p class="title">"Cool Kids Never Sleep"</p>
-            <p class="pp">Hi, it's Sophia Cheng. I'm an incoming MEng CS student at Virginia Tech.</p>
-            <p class="pp">I am passionate about exploring diverse fields by leveraging the knowledge I have, and that's why I chose computer science. This field allows me to connect with various domains, which truly attracts me and makes every exploration enjoyable.</p>
+            <p class="title"><i class="fa-solid fa-location-dot"></i> Falls Church, Virginia</p>
+            
+            <p class="pp">Hi, it's Sophia Cheng. I'm currently pursuing a Master of Engineering in Computer Science at Virginia Tech.</p>
+            <p class="pp">I am passionate about exploring diverse fields by leveraging the knowledge I have, and that's why I chose computer science.<br>This field allows me to connect with various domains, which truly attracts me and makes every exploration enjoyable.</p>
         </div>
 
         <el-divider content-position="left"><p class="divider-text">EXPERIENCES</p></el-divider>
@@ -104,7 +106,13 @@
 
                 <el-timeline-item timestamp="2024/06" placement="top">
                     <el-card>
-                        <p class="work"><i class="fas fa-graduation-cap"></i> Graduated from National Dong Hwa University with a bachelor’s degree in Computer Science and Information Engineering</p>
+                        <p class="work"><i class="fas fa-graduation-cap"></i> Graduated from National Dong Hwa University with a bachelor's degree in Computer Science and Information Engineering</p>
+                    </el-card>
+                </el-timeline-item>
+
+                <el-timeline-item timestamp="2024/08" placement="top">
+                    <el-card>
+                        <p class="work"><i class="fa-solid fa-building-columns"></i></i> Started pursuing my Master of Engineering in Computer Science at Virginia Polytechnic Institute and State University</p>
                     </el-card>
                 </el-timeline-item>
         </div>
@@ -113,10 +121,10 @@
     </div>
     <footer>
         <div class="center">
-            <a href="https://www.facebook.com/profile.php?id=100009630198734" target="_blank"><i class="fab fa-facebook fa-3x icon"></a></i>
-            <a href="https://www.instagram.com/yj429_/" target="_blank"><i class="fab fa-instagram fa-3x icon"></a></i>
-            <a href="https://github.com/becoollll" target="_blank"><i class="fab fa-github fa-3x icon"></a></i>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sophia910429@gmail.com" target="_blank"><i class="fa fa-envelope fa-3x icon"></a></i>
+            <a href="https://www.facebook.com/profile.php?id=100009630198734" target="_blank"><i class="fab fa-facebook fa-2x icon"></a></i>
+            <a href="https://www.linkedin.com/in/itssophiacheng" target="_blank"><i class="fab fa-brands fa-linkedin fa-2x icon"></a></i>
+            <a href="https://github.com/becoollll" target="_blank"><i class="fa-brands fa-square-github fa-2x icon"></a></i>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=itssophiacheng@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope fa-2x icon"></a></i>
         </div>
         <p>Copyright © 2024 Sophia Cheng, All Rights Reserved.</p>
     </footer>
