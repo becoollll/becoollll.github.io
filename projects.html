@@ -26,6 +26,45 @@
 
         <el-divider><p class="divider-text">PROJECTS</p></el-divider>
         <template>
+
+            <!-- Story Corner -->
+            <div class="center a-center">
+                <el-card class="box-card">
+                    <el-carousel height="220px" :autoplay="false" indicator-position="none">
+                        <el-carousel-item><img src="./pic/sc_1.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/sc_2.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/sc_3.png"/></el-carousel-item>
+                    </el-carousel>
+                    <p class="work">Story Corner (Fullstack Website)</p>
+                    <p class="date">09/2024 ~ 11/2024</p>
+                    <p class="date">@Personal Project</p>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Introduction" name="1">
+                            <p>This is a fullstack e-commerce bookstore platform, using React, Java and MySQL.</p>
+                        </el-collapse-item>
+                    </el-collapse>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Details" name="1">
+                            <p class="left">Skills: RESTful APIs, React, TypeScript, MySQL, Java, and Tomcat.</p>
+                        </el-collapse-item>
+                    </el-collapse>
+                    <!--
+                    <a href="" target="_blank">
+                        <el-button round>
+                            <i class="fab fa-github icon"></i>
+                            <p class="button">GitHub</p>
+                        </el-button>
+                    </a>
+                    <a href="https://musicrecommendations.onrender.com/" target="_blank">
+                        <el-button round>
+                            <i class="fas fa-music icon"></i>
+                            <p class="button">webpage</p>
+                        </el-button>
+                    </a>-->
+                </el-card>
+            </div>
+
+            <!-- Music Recommendations -->
             <div class="center a-center">
                 <el-card class="box-card">
                     <el-carousel height="220px" :autoplay="false" indicator-position="none">
@@ -34,8 +73,8 @@
                         <el-carousel-item><img src="./pic/project_chart.png"/></el-carousel-item>
                     </el-carousel>
                     <p class="work">Music Recommendations</p>
-                    <p class="date">2023/05 ~ 2023/06</p>
-                    <p class="date">@final project of Data Science</p>
+                    <p class="date">05/2023 ~ 06/2023</p>
+                    <p class="date">@Final Project of Data Science</p>
                     <el-collapse v-model="activeNames" @change="handleChange">
                         <el-collapse-item title="Introduction" name="1">
                             <p >People usually listen to songs that they heard before. When the
@@ -47,7 +86,7 @@
                     </el-collapse>
                     <el-collapse v-model="activeNames" @change="handleChange">
                         <el-collapse-item title="Details" name="1">
-                            <p class="left">1. Back-end: Python (bs4, pandas, scikit-learn, Flask, spotify)</p>
+                            <p class="left">1. Back-end: Python (bs4, pandas, scikit-learn, Flask, spotify API)</p>
                             <p class="left">2. Front-end: HTML, CSS</p>
                         </el-collapse-item>
                     </el-collapse>
@@ -66,6 +105,8 @@
                 </el-card>
             </div>
 
+
+            <!-- Investment Guide -->
             <div class="center a-center">
                 <el-card class="box-card">
                     <el-carousel height="220px" :autoplay="false" indicator-position="none">
@@ -75,8 +116,8 @@
                         <el-carousel-item><img src="./pic/gp_4.png"/></el-carousel-item>
                     </el-carousel>
                     <p class="work">Investment Guide</p>
-                    <p class="date">2022/03 ~ 2023/05</p>
-                    <p class="date">@Graduation Project</p>
+                    <p class="date">03/2022 ~ 05/2023</p>
+                    <p class="date">@Graduation Capstone Project</p>
                     <el-collapse v-model="activeNames" @change="handleChange">
                         <el-collapse-item title="Introduction" name="1">
                             <p >This is my graduation project (4 students), 
@@ -98,6 +139,37 @@
                 </el-card>
             </div>
 
+            <!-- ios -->
+            <div class="center a-center">
+                <el-card class="box-card">
+                    <el-carousel height="220px" :autoplay="false" indicator-position="none">
+                        <el-carousel-item><img src="./pic/swift_1.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/swift_2.png"/></el-carousel-item>
+                    </el-carousel>
+                    <p class="work">Travel Diary (iOS Mobile App)</p>
+                    <p class="date">11/2023 ~ 01/2024</p>
+                    <p class="date">@Personal Project</p>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Introduction" name="1">
+                            <p>This is a iOS mobile app for travel logs using Swift, user can log travel experiences, favorite locations, and view site details</p>
+                        </el-collapse-item>
+                    </el-collapse>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Details" name="1">
+                            <p class="left">Swift (SwiftUI, SwiftData, MapKit), OpenWeather API</p>
+                            </el-collapse-item>
+                    </el-collapse>
+                    <a href="https://github.com/becoollll/Swift_TravelDiary" target="_blank">
+                        <el-button round>
+                            <i class="fab fa-github icon"></i>
+                            <p class="button">GitHub</p>
+                        </el-button>
+                    </a>
+                </el-card>
+            </div>
+
+
+            <!-- Industry Introductions of Hualien -->
             <div class="center a-center">
                 <el-card class="box-card">
                     <el-carousel height="220px" :autoplay="false" indicator-position="none">
@@ -109,7 +181,7 @@
                         <el-carousel-item><img src="./pic/tour_6.png"/></el-carousel-item>
                     </el-carousel>
                     <p class="work">Industry Introductions of Hualien</p>
-                    <p class="date">2023/04 ~ 2023/05</p>
+                    <p class="date">04/2023 ~ 05/2023</p>
                     <p class="date">@final project of Web-based Client Server Information Systems</p>
                     <el-collapse v-model="activeNames" @change="handleChange">
                         <el-collapse-item title="Introduction" name="1">
