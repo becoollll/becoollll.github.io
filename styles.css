@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Chivo:ital,wght@0,100..900;1,100..900&family=Irish+Grover&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chivo', sans-serif;
+    background-color: #F6F5F1;
+    height: 100%;
+}
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+
+/* header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 2em;
+    margin-bottom: 5em;
+    background-color: #F7F6F1;
+  }
+  
+  .logo {
+    font-family: "Irish Grover", system-ui;
+    font-size: 1.8em;
+    color: #C68090;
+    text-decoration: none;
+  }
+  
+  .nav-right {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-right a {
+    text-decoration: none;
+    color: #20303C;
+    font-family: "Chivo Mono", monospace;
+    font-weight: bold;
+    font-size: 1em;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+
+  .nav-right a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #E4B8E4;
+    transition: width 0.3s ease, transform 0.3s ease;
+    transform: translateX(-1em);
+  }
+  
+  .nav-right a:hover::after {
+    width: calc(100%);
+    transform: translateX(-1em); 
+  }
+  
+  .nav-right a.active::after {
+    width: calc(100%);
+    transform: translateX(-1em);
+  }
+
+
+/* main -> about page */
+.profile-pic {
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    border: 5px solid #E3DECB;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2em auto;
+    display: block;
+}
+
+.bio {
+    font-size: 1em;
+    color: #29485A;
+    text-align: center;
+    line-height: 1.5em;
+    font-weight: 600;
+    margin-top: 5em;
+}
+
+/* main -> projects page */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2em;
+    padding: 2em;
+    max-width: 950px;
+    margin: 0 auto 5em auto;
+  }
+  
+  .project-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-img-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .project-title {
+    color: #C68090;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 0.6em;
+    font-family: "Chivo Mono", monospace;
+    line-height: 1.5em;
+  }
+  
+  .tags {
+    margin-bottom: 1em;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: #E7B6EC;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 0.4em 0.8em;
+    border-radius: 20px;
+    margin: 0.2em 0.3em 0.2em 0;
+    font-family: "Chivo Mono", monospace;
+  }
+  
+  .project-description {
+    color: #29485A;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    font-family: 'Chivo', sans-serif;
+  }
+
+
+  .project-links {
+    margin-top: 1em;
+  }
+  
+  .project-btn {
+    display: inline-block;
+    background-color: #29485A;
+    color: white;
+    font-size: 0.85em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    margin-right: 0.5em;
+    transition: transform 0.3s ease;
+    font-family: "Chivo Mono", monospace;
+  }
+  
+  .project-btn:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+
+  
+/* main -> resume page */
+.resume-section {
+    max-width: 800px;
+    margin: 0em auto 5em auto;
+    padding: 0 1.5em;
+    color: #20303C;
+    font-family: 'Chivo', sans-serif;
+  }
+
+  .resume-header {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  
+  .resume-name {
+    font-size: 2em;
+    color: #C68090;
+    font-family: 'Chivo', sans-serif;
+    margin-bottom: 0.5em;
+  }
+  
+  .resume-contacts {
+    font-family: "Chivo Mono", monospace;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+  }
+  
+  .resume-contacts a {
+    text-decoration: none;
+    color: #29485A;
+    font-weight: bold;
+  }
+  
+  .resume-contacts a:hover {
+    color: #C68090;
+  }
+  
+  .resume-download {
+    text-align: center;
+    margin-top: 3em;
+  }
+  
+  .resume-entry {
+    margin-bottom: 1.5em;
+  }
+  
+  .resume-entry h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+    color: #29485A;
+  }
+  
+  .resume-entry .date {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 0.5em;
+    font-family: "Chivo Mono", monospace;
+  }
+  
+  .resume-entry ul {
+    padding-left: 1.2em;
+    margin: 0;
+  }
+  
+  .resume-entry ul li {
+    font-size: 0.95em;
+    margin-bottom: 0.5em;
+  }
+  .paper-link {
+    display: inline-block;
+    background-color: #E4B8E4;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 0.4em 0.8em;
+    border-radius: 20px;
+    margin: 0.2em 0.3em 0.2em 0;
+    font-family: "Chivo Mono", monospace;
+    transition: transform 0.3s ease;
+  }
+  .paper-link:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+  .paper-link a{
+    color: white;
+    text-decoration: none;
+  }
+  .pub-text {
+    color: #29485A;
+  }
+
+  /* Resume Cards */
+.resume-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    padding: 1.5em 2em;
+    margin-bottom: 2em;
+  }
+  
+  .resume-card h2 {
+    font-size: 1.4em;
+    color: #C68090;
+    border-left: 6px solid #E4B8E4;
+    padding-left: 0.6em;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  
+  .resume-card h3 {
+    font-size: 1.05em;
+    color: #29485A;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+  }
+  
+  .resume-card .date {
+    font-size: 0.9em;
+    color: #777;
+    font-family: "Chivo Mono", monospace;
+    margin-bottom: 0.6em;
+  }
+  
+  .resume-card ul {
+    margin: 0;
+    padding-left: 1.2em;
+  }
+  
+  .resume-card ul li {
+    font-size: 0.95em;
+    margin-bottom: 0.4em;
+  }
+
+  .skill-category {
+    margin-bottom: 1.2em;
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 0.4em;
+  }
+  
+  .skill-tag {
+    background-color: #E7B6EC;
+    color: white;
+    font-size: 0.8em;
+    padding: 0.4em 0.8em;
+    border-radius: 20px;
+    font-family: "Chivo Mono", monospace;
+    font-weight: bold;
+    margin-top: 0.5em;
+  }
+  .skill-title {
+    color: #29485A;
+    font-family: "Chivo Mono", monospace;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+/* footer */
+footer {
+    background-color: #E3DECB;
+    width: 100%;
+    padding-bottom: 1em;
+  }
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+.contact-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #C68090;
+    font-size: 0.9em;
+    margin: 0 1em;
+    font-family: "Chivo Mono", monospace;
+}
+
+.footer-icon {
+    font-size: 2em;
+    margin-right: 0.3em;
+}
+
+.copyright-text {
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+    font-family: "Chivo Mono", monospace;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Header */
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5em;
+      margin-bottom: 2em;
+    }
+  
+    .nav-right {
+        flex-direction: row;
+        gap: 1.2em;
+        align-items: center;
+        margin-top: 2em;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .nav-right a::after,
+      .nav-right a:hover::after,
+      .nav-right a.active::after {
+        transform: translateX(0);
+      }
+    
+  
+    .profile-pic {
+      width: 10em;
+      height: 10em;
+      margin-top: 3em;
+    }
+  
+    .bio {
+      padding: 0 2em;
+      margin-top: 2em;
+      font-size: 0.95em;
+    }
+  
+    /* Projects */
+    .projects-container {
+      grid-template-columns: 1fr;
+      padding: 1em;
+    }
+
+    .project-img-container {
+      height: 200px;
+    }
+  
+    .project-title {
+      font-size: 1em;
+    }
+  
+    .project-description {
+      font-size: 0.85em;
+    }
+  
+    .project-btn {
+      font-size: 0.8em;
+      padding: 0.4em 0.8em;
+    }
+  
+    /* Resume */
+    .resume-section {
+      padding: 0 1em;
+    }
+  
+    .resume-name {
+      font-size: 1.6em;
+    }
+  
+    .resume-contacts {
+      flex-direction: column;
+      gap: 0.5em;
+      font-size: 0.85em;
+    }
+  
+    .resume-card h2 {
+      font-size: 1.2em;
+    }
+  
+    .skill-tag {
+      font-size: 0.75em;
+      padding: 0.3em 0.7em;
+    }
+  
+    .resume-download {
+      margin-top: 2em;
+    }
+  
+    /* Footer */
+    .contact-container {
+      flex-direction: column;
+      gap: 0.5em;
+    }
+  
+    .footer-icon {
+      font-size: 1.5em;
+    }
+  
+    .contact-container a {
+      font-size: 0.85em;
+    }
+  }

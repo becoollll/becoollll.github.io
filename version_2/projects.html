@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>It's Sophia Cheng | Projects</title>
+    <meta charset="UTF-8">
+    <meta name = "description" content="Hey! This is Sophia's little website.">
+    <meta name = "author" content = "Sophia Cheng">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link href="./CSS/projects.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/dc3fe69ce6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="adjust">
+    <div id="app">
+        <div class="center">
+            <!--navigation -->
+            <el-menu class="el-menu-demo" mode="horizontal" @select="navigateTo" active-text-color="#fff">
+                <el-menu-item index="index.html"><p class="navtext">About Me</p></el-menu-item>
+                <el-menu-item index="projects.html"><p class="navtext">Projects</p></el-menu-item>
+            </el-menu>
+        </div>
+
+        <el-divider><p class="divider-text">PROJECTS</p></el-divider>
+        <template>
+
+            <!-- Story Corner -->
+            <div class="center a-center">
+                <el-card class="box-card">
+                    <el-carousel height="220px" :autoplay="false" indicator-position="none">
+                        <el-carousel-item><img src="./pic/sc_1.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/sc_2.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/sc_3.png"/></el-carousel-item>
+                    </el-carousel>
+                    <p class="work">Story Corner (Fullstack Website)</p>
+                    <p class="date">09/2024 ~ 11/2024</p>
+                    <p class="date">@Personal Project</p>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Introduction" name="1">
+                            <p>This is a fullstack e-commerce bookstore platform, using React, Java and MySQL.</p>
+                        </el-collapse-item>
+                    </el-collapse>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Details" name="1">
+                            <p class="left">Skills: RESTful APIs, React, TypeScript, MySQL, Java, and Tomcat.</p>
+                        </el-collapse-item>
+                    </el-collapse>
+                    <!--
+                    <a href="" target="_blank">
+                        <el-button round>
+                            <i class="fab fa-github icon"></i>
+                            <p class="button">GitHub</p>
+                        </el-button>
+                    </a>
+                    <a href="https://musicrecommendations.onrender.com/" target="_blank">
+                        <el-button round>
+                            <i class="fas fa-music icon"></i>
+                            <p class="button">webpage</p>
+                        </el-button>
+                    </a>-->
+                </el-card>
+            </div>
+
+            <!-- Music Recommendations -->
+            <div class="center a-center">
+                <el-card class="box-card">
+                    <el-carousel height="220px" :autoplay="false" indicator-position="none">
+                        <el-carousel-item><img src="./pic/project_mr1.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/project_mr2.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/project_chart.png"/></el-carousel-item>
+                    </el-carousel>
+                    <p class="work">Music Recommendations</p>
+                    <p class="date">05/2023 ~ 06/2023</p>
+                    <p class="date">@Final Project of Data Science</p>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Introduction" name="1">
+                            <p >People usually listen to songs that they heard before. When the
+                                music APP recommend some songs, they usually belong to the same
+                                singers. This system can solve this problem, people will get
+                                recommendations by genres of songs, not get recommendations by
+                                singers. </p>
+                        </el-collapse-item>
+                    </el-collapse>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Details" name="1">
+                            <p class="left">1. Back-end: Python (bs4, pandas, scikit-learn, Flask, spotify API)</p>
+                            <p class="left">2. Front-end: HTML, CSS</p>
+                        </el-collapse-item>
+                    </el-collapse>
+                    <a href="https://github.com/becoollll/Music-Recommendations" target="_blank">
+                        <el-button round>
+                            <i class="fab fa-github icon"></i>
+                            <p class="button">GitHub</p>
+                        </el-button>
+                    </a>
+                    <a href="https://musicrecommendations.onrender.com/" target="_blank">
+                        <el-button round>
+                            <i class="fas fa-music icon"></i>
+                            <p class="button">webpage</p>
+                        </el-button>
+                    </a>
+                </el-card>
+            </div>
+
+
+            <!-- Investment Guide -->
+            <div class="center a-center">
+                <el-card class="box-card">
+                    <el-carousel height="220px" :autoplay="false" indicator-position="none">
+                        <el-carousel-item><img src="./pic/gp_1.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/gp_2.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/gp_3.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/gp_4.png"/></el-carousel-item>
+                    </el-carousel>
+                    <p class="work">Investment Guide</p>
+                    <p class="date">03/2022 ~ 05/2023</p>
+                    <p class="date">@Graduation Capstone Project</p>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Introduction" name="1">
+                            <p >This is my graduation project (4 students), 
+                                and the full name of this project is Investment Guide-Fund Portfolio Analysis and Management Assistance System. </p>
+                        </el-collapse-item>
+                    </el-collapse>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Details" name="1">
+                            <p class="left">1. Back-end: PHP, Python, Maria DB, Ubuntu's crontab and FinMind API</p>
+                            <p class="left">2. Front-end: HTML, CSS</p>
+                            </el-collapse-item>
+                    </el-collapse>
+                    <a href="https://github.com/becoollll/Investment-Guide" target="_blank">
+                        <el-button round>
+                            <i class="fab fa-github icon"></i>
+                            <p class="button">GitHub</p>
+                        </el-button>
+                    </a>
+                </el-card>
+            </div>
+
+            <!-- ios -->
+            <div class="center a-center">
+                <el-card class="box-card">
+                    <el-carousel height="220px" :autoplay="false" indicator-position="none">
+                        <el-carousel-item><img src="./pic/swift_1.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/swift_2.png"/></el-carousel-item>
+                    </el-carousel>
+                    <p class="work">Travel Diary (iOS Mobile App)</p>
+                    <p class="date">11/2023 ~ 01/2024</p>
+                    <p class="date">@Personal Project</p>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Introduction" name="1">
+                            <p>This is a iOS mobile app for travel logs using Swift, user can log travel experiences, favorite locations, and view site details</p>
+                        </el-collapse-item>
+                    </el-collapse>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Details" name="1">
+                            <p class="left">Swift (SwiftUI, SwiftData, MapKit), OpenWeather API</p>
+                            </el-collapse-item>
+                    </el-collapse>
+                    <a href="https://github.com/becoollll/Swift_TravelDiary" target="_blank">
+                        <el-button round>
+                            <i class="fab fa-github icon"></i>
+                            <p class="button">GitHub</p>
+                        </el-button>
+                    </a>
+                </el-card>
+            </div>
+
+
+            <!-- Industry Introductions of Hualien -->
+            <div class="center a-center">
+                <el-card class="box-card">
+                    <el-carousel height="220px" :autoplay="false" indicator-position="none">
+                        <el-carousel-item><img src="./pic/tour_1.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/tour_2.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/tour_3.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/tour_4.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/tour_5.png"/></el-carousel-item>
+                        <el-carousel-item><img src="./pic/tour_6.png"/></el-carousel-item>
+                    </el-carousel>
+                    <p class="work">Industry Introductions of Hualien</p>
+                    <p class="date">04/2023 ~ 05/2023</p>
+                    <p class="date">@final project of Web-based Client Server Information Systems</p>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Introduction" name="1">
+                            <p>This website introduced industries of Hualien, including the cement industry, tourism industry, and fishery industry.</p>
+                        </el-collapse-item>
+                    </el-collapse>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Details" name="1">
+                            <p class="left">1. Back-end: PHP, Python, Maria DB, Google Maps API, News API</p>
+                            <p class="left">2. Front-end: HTML, CSS, JavaScript</p>
+                            </el-collapse-item>
+                    </el-collapse>
+                    <a href="https://github.com/becoollll/Industry-Introductions-of-Hualien" target="_blank">
+                        <el-button round>
+                            <i class="fab fa-github icon"></i>
+                            <p class="button">GitHub</p>
+                        </el-button>
+                    </a>
+                </el-card>
+            </div>
+            <div class="a-center last">
+                <a href="https://github.com/becoollll?tab=repositories" target="_blank">
+                    <el-button round>
+                        <i class="fab fa-github icon"></i>
+                        <p class="button">More on GitHub</p>
+                    </el-button>
+                </a>
+            </div>
+        </template>
+
+
+
+    </div>
+    </div>
+    <footer>
+        <div class="center">
+            <a href="https://www.facebook.com/profile.php?id=100009630198734" target="_blank"><i class="fab fa-facebook fa-2x icon"></a></i>
+            <a href="https://www.linkedin.com/in/itssophiacheng" target="_blank"><i class="fab fa-brands fa-linkedin fa-2x icon"></a></i>
+            <a href="https://github.com/becoollll" target="_blank"><i class="fa-brands fa-square-github fa-2x icon"></a></i>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=itssophiacheng@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope fa-2x icon"></a></i>
+
+        </div>
+        <p>Copyright © 2024 Sophia Cheng, All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+<script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script  src="./js/app.js"></script>

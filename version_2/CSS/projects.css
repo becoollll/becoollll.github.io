@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto+Mono:wght@500;600;700&family=Special+Elite&display=swap');
+
+html, body {
+  height: 100%;
+  margin-top: 0%;
+  padding: 0;
+  background-color: #F4F3EE;
+  font-family: 'Crimson Text', serif;
+}
+
+/* center */
+.center{
+  text-align: center;
+}
+.a-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  text-align: left;
+  font-size: 1.1em;
+  color: #8A817C;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* text */
+p {
+  color: #463F3A;
+  font-size: 1.2em;
+  text-align: left;
+}
+.work {
+  font-size: 1.3em;
+  color: #8A817C;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+.date {
+    font-size: 1em;
+    color: #BCB8B1;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+.title {
+  font-family: 'Special Elite', cursive;
+  font-size: 1.3em;
+}
+
+/* navbar */
+@media only screen and (min-width: 769px) {
+  .el-menu-demo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #F4F3EE;
+    margin-bottom: 10rem;
+    z-index: 999;
+    background-color: #8A817C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .el-menu-demo .el-menu-item {
+    padding: 20px 20px 15px;
+    transition: background-color 0.3s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .el-menu-demo .el-menu-item:hover {
+    background-color: #BCB8B1 !important;
+    color: #F4F3EE !important;
+  }
+  .navtext {
+    color: #F4F3EE;
+    font-family: 'Special Elite', cursive;
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .el-menu-demo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #F4F3EE;
+    margin-bottom: 10rem;
+    z-index: 999;
+    background-color: #8A817C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .el-menu-demo .el-menu-item {
+    padding: 20px 20px 15px;
+    transition: background-color 0.3s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .el-menu-demo .el-menu-item:hover {
+    background-color: #BCB8B1 !important;
+    color: #F4F3EE !important;
+  }
+  .navtext {
+    color: #F4F3EE;
+    font-family: 'Special Elite', cursive;
+    font-size: 1.5em;
+  }
+}
+
+/* footer */
+.icon {
+  margin-left: 2%;
+  margin-right: 2%;
+  color: #E0AFA0;
+}
+@media only screen and (max-width: 769px) {
+  footer .icon {
+    font-size: 2em;
+  }
+}
+footer {
+  background-color: #8A817C;
+  padding-top: 2em;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-top: 0px;
+}
+footer p {
+  margin: 2%;
+  color: #E0AFA0;
+  padding-bottom: 2%;    
+  text-align: center;
+  font-size: 100%;
+}
+
+/* hr */
+.el-divider__text{
+  background-color: #F4F3EE;
+}
+.divider-text {
+  font-size: 150%;
+  color:#8A817C;
+}
+
+/* card */
+.text {
+  font-size: 140%;
+}
+@media only screen and (min-width: 769px) {
+  .box-card {
+    margin: 5% 0;
+    width: 480px;
+  }
+  .el-card img {
+    width: 360px;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .box-card {
+    margin: 5% 3%;
+    width: 360px;
+  }
+  .el-card img {
+    width: 280px;
+  }
+}
+
+/* button */
+.el-collapse-item__header {
+  color: #E0AFA0;
+  font-family: 'Roboto Mono', monospace;
+}
+.el-button {
+    border: none;
+    background-color: #F4F3EE;
+    box-shadow:0px 1px 0px 1px rgba(164, 161, 161, 0.363);
+    margin: 4%;
+}
+.el-button:hover{
+    background-color: #fff;
+}
+.button {
+    color: #E0AFA0;
+    font-size: 100%;
+    display: inline;
+    font-family: 'Roboto Mono', monospace;
+}
+.last {
+    margin-bottom: 5%;
+}
+.last .el-button {
+    background-color: #fff;
+}
+.last .el-button:hover {
+    background-color: #F4F3EE;
+}
+
+/* rwd */
+@media screen and (min-width: 800px) {
+  .adjust {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .el-divider {
+    background-color: #BCB8B1;
+    margin-top: 15%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .block{
+    margin-right: 5%;
+  }
+  .el-divider {
+    background-color: #BCB8B1;
+    margin-top: 50%;
+  }
+}
+.block {
+  margin-bottom: 5%;
+}
+
+
